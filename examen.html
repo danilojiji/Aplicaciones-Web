@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<style>
+    .contenido{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    .noticiero{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .ultimas-noticias{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .fecha{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fecha-larga{
+        grid-row: 1;
+        grid-column: span 2;
+    }
+
+    .arriba{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        background-color: lightblue;
+    }
+
+    .categorias{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding: 10px;
+        background-color: lightgoldenrodyellow;
+    }  
+</style>
+<body>
+    <div class = "arriba">
+        <div class = "logo">
+            <img src="img/dui.jpg" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; padding: 10px;">
+            <p>EL MUNDO ES TUYO</p>
+        </div>
+        <div class = "noticiero">
+            <h1>El noticiero</h1>
+        </div>
+        
+        <div class = "fecha">
+            <div class = "fecha-larga">
+                <p>Jueves 8 de Octubre</p>
+            </div>
+            <div class = "fecha">
+                <p>2026</p>
+            
+            </div> 
+            <div class = "fecha">
+                <p>N12345</p>
+            
+            </div> 
+        </div>
+    </div>
+    
+    <div class = "categorias">
+        <div>
+            <h5>Inicio</h5>
+        </div>
+        <div>
+            <h5>Mundo</h5>
+        </div>
+        <div>
+            <h5>Nacional</h5>
+        </div>
+        <div>
+            <h5>Economia</h5>
+        </div>
+        <div>
+            <h5>Deportes</h5>
+        </div>
+        <div>
+            <h5>Tecnologia</h5>
+        </div>
+        <div>
+            <h5>Cultura</h5>
+        </div>
+    </div>
+
+    <main class ="contenido">
+        <div class = "ultimas-noticias">
+            <img src="img/dui.jpg" alt="logo" style="width: 50px; height: 50px; padding: 10px;">
+            <p>noticia 1</p>
+        </div>
+        <div class = "ultimas-noticias">
+            <img src="img/dui.jpg" alt="logo" style="width: 50px; height: 50px; padding: 10px;">
+            <p>noticia 1</p>
+        </div>
+        <div class = "ultimas-noticias">
+            <img src="img/dui.jpg" alt="logo" style="width: 50px; height: 50px; padding: 10px;">
+            <p>noticia 1</p>
+        </div>
+
+        <div>
+            <p>1</p>
+        </div>
+        <div>
+            <p>1</p>
+        </div>
+        <div>
+            <p>1</p>
+        </div>
+
+
+    </main>
+</body>
+</html>
