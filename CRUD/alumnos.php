@@ -37,17 +37,39 @@ $query=mysqli_query($con,$select);
                 </tr>
             </thead>
             <tbody>
+                <?php
+                    while($row=mysqli_fetch_array($query)){
+                ?>
                 <tr>
-                    <td>1</td>
-                    <td>123456</td>
-                    <td>Cristopher Danilo</td>
-                    <td>Hernandez</td>
-                    <td>Herrera</td>
-                    <td>19</td>
-                    <td>Eliminar | Editar</td>
+                    <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['matricula'] ?></td>
+                    <td><?php echo $row['nombre'] ?></td>
+                    <td><?php echo $row['apellido_p'] ?></td>
+                    <td><?php echo $row['apellido_m'] ?></td>
+                    <td><?php echo $row['edad'] ?></td>
+                    <td>
+                        Eliminar
+                        <br>
+                        Editar
+                    </td>
                 </tr>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
     </div>
+
+<h1>Formulario</h1>
+<form action="insertar.php" method="POST">
+    <input type="text" class="form-control" name="matricula" placeholder="Matricula">
+    <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+    <input type="text" class="form-control" name="apellido_p" placeholder="Apellido Paterno">
+    <input type="text" class="form-control" name="apellido_m" placeholder="Apellido Materno">
+    <input type="text" class="form-control" name="edad" placeholder="Edad">
+    <button type="submit">Guardar</button>
+
+</form>
+
 </body>
 </html>
