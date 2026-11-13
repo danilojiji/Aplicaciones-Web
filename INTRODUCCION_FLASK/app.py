@@ -21,7 +21,7 @@ app.secret_key = 'mysecretkey'
 def home():
     return render_template("login.html")
 
-@app.route("/registro", method=["GET", ["POST"]])
+""" @app.route("/registro", method=["GET", ["POST"]])
 def registro():
     if request.method == "POST":
         nombre = request.form["nombre"]
@@ -32,7 +32,7 @@ def registro():
         id_rol = request.form["id_rol"]
 
         password_hasheada = generate_password_hash(password_hash)
-
+ """
 #iniciamos el servidor FLASK en el puerto 5000
 if __name__ == "__main__":
     app.run(port=5000)

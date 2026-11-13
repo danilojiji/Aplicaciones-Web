@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de directorio de contactos</title>
+</head>
+<body>
+    <div>
+        <h1>Directorio de Contactos</h1>
+
+        {% with mesajes = get_flashed_mesajes() %}
+            {% if mesajes %}
+                <ul>
+                    {% for mesajes in mesajes %}
+                        <li>{{ msj }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Formulario para agregar un nuevo contacto -->
+         <form action="/guardar" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" placeholder="Apellido">
+            <input type="text" name="telefono" placeholder="Teléfono">
+            <input type="text" name="correo" placeholder="Correo electrónico">
+            <input type="text" name="direccion" placeholder="Dirección">
+            <button type="submit">Agregar Contacto</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>ID: </td>
+                    <td>Nombre: </td>
+                    <td>Apellido: </td>
+                    <td>Teléfono: </td>
+                    <td>Correo electrónico: </td>
+                    <td>Dirección: </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contacto in listDirectorio %}
+                    <tr>
+                        <td>{{ contacto[0] }}</td>
+                        <td>{{ contacto[1] }}</td>
+                        <td>{{ contacto[2] }}</td>
+                        <td>{{ contacto[3] }}</td>
+                        <td>{{ contacto.4 }}</td>
+                        <td>{{ contacto.5 }}</td>
+                    </tr>
+                {% endfor %}
+        </table>
+
+
+    </div>
+</body>
+</html>
